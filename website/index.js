@@ -28,7 +28,9 @@ var typed = new Typed('#typed', {
     strings: [
         'Cloud Engineer',
         'Cloud Architect',
-        'DevOps Engineer'
+        'AI Evangelist',
+        'Problem Solver',
+        'Branding Expert',
     ],
     typeSpeed: 50,
     backSpeed: 50,
@@ -39,7 +41,9 @@ var typed_2 = new Typed('#typed_2', {
     strings: [
         'Cloud Engineer',
         'Cloud Architect',
-        'DevOps Engineer'
+        'AI Evangelist',
+        'Problem Solver',
+        'Branding Expert',
     ],
     typeSpeed: 50,
     backSpeed: 50,
@@ -56,12 +60,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const counter = document.querySelector(".counter-number");
-async function updateCounter() {
-    let response = await fetch(
-        "https://wwjcx7tyxrbjmbkf3vc3teo3mu0qrvhq.lambda-url.ca-central-1.on.aws/"
-    );
-    let data = await response.json();
-    counter.innerHTML = `👀 Views: ${data}`;
-}
-updateCounter();
+document.addEventListener("DOMContentLoaded", () => {
+  const counter = document.querySelector(".counter-number");
+
+  async function updateCounter() {
+    try {
+      const response = await fetch("https://axhsybpjh4wcnrvn6v3xpsra7i0xsewl.lambda-url.us-east-1.on.aws/");
+      const data = await response.json();
+
+      if (data.views !== undefined) {
+        counter.innerHTML = `Views: ${data.views}`;
+      } else {
+        counter.innerHTML = "Views: N/A";
+      }
+    } catch (error) {
+      console.error("Failed to fetch view count:", error);
+      counter.innerHTML = "Couldn't read views";
+    }
+  }
+
+  updateCounter();
+});

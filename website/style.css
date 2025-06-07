@@ -9,7 +9,8 @@ body{
     --color-black: #000000;
     --color-white: #ffffff;
     --color-border: #ffffff34;
-    --color-blue: #6C63FF;
+    --color-blue: #06abc4;
+     --color-fuschia: #ff80d3;
     --font-staat: 'Staatliches', cursive;
     --font-os:  'Oswald', sans-serif;
     --font-ram: 'Rambla', sans-serif;
@@ -220,5 +221,5 @@ body{
 }
 
 .eye :hover{
-    color: var(--color-white);
+    color: var(--color-fuschia);
 }
