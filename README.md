@@ -31,7 +31,7 @@ What is Cloud Resume Challenge? - (https://www.youtube.com/watch?v=rzdSuiU_TQc&l
 
  
 ## Author
-- Twitter: [@ryanwhitfield](https://twitter.com/rishabincloud)
+- Twitter: [@ryanwhitfield](https://twitter.com/ryanwhitfield)
 - LinkedIn: [ryanwhitfield](https://www.linkedin.com/in/ryanwhitfield/)
   
 
